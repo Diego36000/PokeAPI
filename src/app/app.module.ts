@@ -14,6 +14,7 @@ import { CapitalizeFirstLetterPipe } from './pipes/capitalize-first-letter.pipe'
 import { InputFormComponent } from './components/input-form/input-form.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

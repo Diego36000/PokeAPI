@@ -3,4 +3,5 @@
     <mat-label>Search Pokemon using Name</mat-label>
     <input matInput [formControl]="InputName" (blur)="getPokemonByName()" id="name" name="name">
   </mat-form-field>
+  <mat-checkbox [formControl]="InputShiny" (change)="isShinySelected()" class="">Shiny Sprites</mat-checkbox>
 </div>

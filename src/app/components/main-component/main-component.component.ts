@@ -10,6 +10,7 @@ import { Pokemon } from 'pokenode-ts';
 export class MainComponentComponent implements OnInit {
 
   @Input() pokemonList: Pokemon[] = [];
+  @Input() isShiny: Boolean = false;
 
   constructor() {}
 

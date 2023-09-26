@@ -22,6 +22,10 @@ export class CapitalizeFirstLetterPipe implements PipeTransform {
       words[0] = 'Galarian';
       words[1] = this.capitalizeFirstLetter(pokemonName);
       return words.join(' ');
+    } else if (words.length >= 2 && words[1].toLowerCase() === 'mega') {
+      words[0] = 'Mega';
+      words[1] = this.capitalizeFirstLetter(pokemonName);
+      return words.join(' ');
     } else {
       return value
       .replace(/-/g, ' ')

@@ -1,5 +1,5 @@
 <app-nav-bar></app-nav-bar>
 <div style="padding: 30px;">
-  <app-input-form (pokemonList)="collectPokemon($event)"></app-input-form>
-  <app-main-component [pokemonList]="pokemonList"></app-main-component>
+  <app-input-form (pokemonList)="collectPokemon($event)" (isShiny)="setShinySprites($event)"></app-input-form>
+  <app-main-component [pokemonList]="pokemonList" [isShiny]="isShiny"></app-main-component>
 </div>

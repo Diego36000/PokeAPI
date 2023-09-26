@@ -11,10 +11,12 @@ import { FormControl } from '@angular/forms';
 export class InputFormComponent implements OnInit {
 
   @Output() pokemonList = new EventEmitter<Pokemon[]>();
+  @Output() isShiny = new EventEmitter<Boolean>();
 
   pokemonArr:Pokemon[] = [];
   //InputID = new FormControl();
   InputName = new FormControl();
+  InputShiny = new FormControl();
 
   constructor(private pokemonService:PokemonServiceService) {}
 
@@ -22,6 +24,11 @@ export class InputFormComponent implements OnInit {
 
   sendPokemon() {
     this.pokemonList.emit(this.pokemonArr);
+  }
+
+  isShinySelected() {
+    console.log(this.InputShiny.value);
+    this.isShiny.emit(this.InputShiny.value);
   }
 
   /*
