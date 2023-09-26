@@ -8,15 +8,4 @@ import { Pokemon } from 'pokenode-ts';
 })
 export class AppComponent {
   title = 'PokeAPI';
-
-  pokemonList:Pokemon[] = [];
-  isShiny:Boolean = false;
-
-  collectPokemon(pokemonList:Pokemon[]) {
-    this.pokemonList = pokemonList;
-  }
-
-  setShinySprites(isShiny:Boolean) {
-    this.isShiny = isShiny;
-  }
 }

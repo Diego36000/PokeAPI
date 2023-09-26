@@ -6,3 +6,8 @@ nav {
 .navbar-brand {
   color: white;
 }
+
+.custom-link1 {
+  font-size: 1.1em;
+  color:white;
+}

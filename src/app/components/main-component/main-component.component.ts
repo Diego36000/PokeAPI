@@ -1,4 +1,5 @@
 import { Component,OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Pokemon } from 'pokenode-ts';
 
 
@@ -12,7 +13,11 @@ export class MainComponentComponent implements OnInit {
   @Input() pokemonList: Pokemon[] = [];
   @Input() isShiny: Boolean = false;
 
-  constructor() {}
+  constructor(private router:Router) {}
 
   ngOnInit(): void {}
+
+  seeDetails(data:Pokemon) {
+    this.router.navigateByUrl(`pokemon/${data.id.toString()}`, {state:{pokemon:data}})
+  }
 }
