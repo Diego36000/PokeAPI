@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Pokemon } from 'pokenode-ts';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PokeAPI';
+
+  pokemonList:Pokemon[] = [];
+
+  collectPokemon(pokemonList:Pokemon[]) {
+    this.pokemonList = pokemonList;
+  }
 }
