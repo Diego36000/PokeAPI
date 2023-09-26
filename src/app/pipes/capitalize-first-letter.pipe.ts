@@ -39,8 +39,6 @@ export class CapitalizeFirstLetterPipe implements PipeTransform {
       })
       .join(' ');
     }
-
-    return words.join(' ');
   }
 
   capitalizeFirstLetter(str:string):string {
