@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Pokemon } from 'pokenode-ts';
-import { SharePokemonService } from 'src/app/services/share-pokemon.service';
+import { ShareDataService } from 'src/app/services/share-data.service';
 
 @Component({
   selector: 'app-pokemon-details',
@@ -12,11 +12,11 @@ export class PokemonDetailsComponent implements OnInit {
 
   pokemon!: Pokemon;
 
-  constructor(private router:ActivatedRoute, private sharePokemon:SharePokemonService) {
+  constructor(private router:ActivatedRoute, private shareData:ShareDataService) {
 
   }
 
   ngOnInit() {
-    this.pokemon = this.sharePokemon.getPokemon();
+    this.pokemon = this.shareData.getPokemon();
   }
 }

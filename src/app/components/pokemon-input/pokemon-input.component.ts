@@ -5,11 +5,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ShareDataService } from 'src/app/services/share-data.service';
 
 @Component({
-  selector: 'app-input-form',
-  templateUrl: './input-form.component.html',
-  styleUrls: ['./input-form.component.css']
+  selector: 'app-pokemon-input',
+  templateUrl: './pokemon-input.component.html',
+  styleUrls: ['./pokemon-input.component.css']
 })
-export class InputFormComponent implements OnInit, OnDestroy {
+export class PokemonInputComponent implements OnInit, OnDestroy {
 
   @Output() pokemonList = new EventEmitter<Pokemon[]>();
   @Output() isShiny = new EventEmitter<Boolean>();

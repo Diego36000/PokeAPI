@@ -12,7 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CapitalizeFirstLetterPipe } from './pipes/capitalize-first-letter.pipe';
-import { InputFormComponent } from './components/input-form/input-form.component';
+import { PokemonInputComponent } from './components/pokemon-input/pokemon-input.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RouteErrorComponent } from './components/route-error/route-error.component';
@@ -32,7 +32,7 @@ import { BerryDetailsComponent } from './components/berry-details/berry-details.
     AppComponent,
     MainComponentComponent,
     CapitalizeFirstLetterPipe,
-    InputFormComponent,
+    PokemonInputComponent,
     RouteErrorComponent,
     PokemonMainComponent,
     PokemonDetailsComponent,
