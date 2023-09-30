@@ -1,0 +1,15 @@
+<main *ngIf="itemList">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let item of itemList" class="col-md-2">
+        <div class="card">
+          <img class="card-img-top w-50 mx-auto" src="{{item.sprites.default}}" alt="Item Sprite">
+          <div class="card-body mx-auto">
+            <h2 class="card-title"> {{item.name | capitalizeFirstLetter }} </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+

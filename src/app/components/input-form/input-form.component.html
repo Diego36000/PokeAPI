@@ -1,7 +1,7 @@
 <div>
   <mat-form-field appearance="outline" class="px-1">
     <mat-label>Type pokemon name</mat-label>
-    <input matInput [formControl]="InputName" id="name" name="name">
+    <input matInput [formControl]="InputName" id="name" name="name" [pattern]="'^[a-zA-Z]?$'" type="text" class="form-control">
   </mat-form-field>
   <mat-checkbox [formControl]="InputShiny" (change)="isShinySelected()" class="">Shiny Sprites</mat-checkbox>
   <button class="mat-raised-button" color="warn" (click)="getPokemonByName()"> Search </button>

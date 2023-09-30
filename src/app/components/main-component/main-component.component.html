@@ -3,8 +3,8 @@
     <div class="row">
       <div *ngFor="let pokemon of pokemonList" class="col-md-3">
         <div class="card" style="width: 14rem;" (dblclick)="seeDetails(pokemon)">
-          <img class="card-img-top" src="{{pokemon.sprites.front_default}}" alt="Pokemon Sprite" *ngIf="!isShiny">
-          <img class="card-img-top" src="{{pokemon.sprites.front_shiny}}" alt="Pokemon Shiny Sprite" *ngIf="isShiny">
+          <img class="card-img-top" src="{{pokemon.sprites.front_default}}" alt="Pokemon Sprite" *ngIf="!isShiny || pokemon.id >= 906">
+          <img class="card-img-top" src="{{pokemon.sprites.front_shiny}}" alt="Pokemon Shiny Sprite" *ngIf='isShiny && 906 > pokemon.id'> <!-- Last generation pokemon don't have shiny sprites in the api-->
           <div class="card-body">
             <h2 class="card-title"> {{pokemon.name | capitalizeFirstLetter }} </h2>
           </div>

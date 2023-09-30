@@ -1,0 +1,7 @@
+<div>
+  <mat-form-field appearance="outline" class="px-1">
+    <mat-label>Type item name</mat-label>
+    <input matInput [formControl]="InputName" id="name" name="name" [pattern]="'^[a-zA-Z]?$'" type="text" class="form-control">
+  </mat-form-field>
+  <button class="mat-raised-button" color="warn" (click)="getItemByName()"> Search </button>
+</div>
