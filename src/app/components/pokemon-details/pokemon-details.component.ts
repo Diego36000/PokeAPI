@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Pokemon } from 'pokenode-ts';
-import { PokemonServiceService } from 'src/app/services/pokemon-service.service';
+import { SharePokemonService } from 'src/app/services/share-pokemon.service';
 
 @Component({
   selector: 'app-pokemon-details',
@@ -12,19 +12,11 @@ export class PokemonDetailsComponent implements OnInit {
 
   pokemon!: Pokemon;
 
-  constructor(private router:ActivatedRoute, private pokemonService: PokemonServiceService) {
+  constructor(private router:ActivatedRoute, private sharePokemon:SharePokemonService) {
 
   }
 
-  async ngOnInit() {
-    this.router.params.subscribe(async params => {
-      const id = +params['id'];
-
-      try {
-        this.pokemon = await this.pokemonService.getPokemonByID(id);
-      } catch (error) {
-        console.log("An error ocurred", error);
-      }
-    });
+  ngOnInit() {
+    this.pokemon = this.sharePokemon.getPokemon();
   }
 }

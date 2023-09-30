@@ -1,6 +1,7 @@
 import { Component,OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pokemon } from 'pokenode-ts';
+import { SharePokemonService } from 'src/app/services/share-pokemon.service';
 
 
 @Component({
@@ -13,11 +14,12 @@ export class MainComponentComponent implements OnInit {
   @Input() pokemonList: Pokemon[] = [];
   @Input() isShiny: Boolean = false;
 
-  constructor(private router:Router) {}
+  constructor(private router:Router, private sharePokemon:SharePokemonService) {}
 
   ngOnInit(): void {}
 
   seeDetails(data:Pokemon) {
-    this.router.navigateByUrl(`pokemon/${data.id.toString()}`, {state:{pokemon:data}})
+    this.sharePokemon.setPokemon(data);
+    this.router.navigateByUrl(`pokemon/${data.id.toString()}`)
   }
 }

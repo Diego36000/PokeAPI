@@ -1,7 +1,7 @@
 <main *ngIf="pokemonList">
   <div class="container">
     <div class="row">
-      <div *ngFor="let pokemon of pokemonList" class="col-md">
+      <div *ngFor="let pokemon of pokemonList" class="col-md-3">
         <div class="card" style="width: 14rem;" (dblclick)="seeDetails(pokemon)">
           <img class="card-img-top" src="{{pokemon.sprites.front_default}}" alt="Pokemon Sprite" *ngIf="!isShiny">
           <img class="card-img-top" src="{{pokemon.sprites.front_shiny}}" alt="Pokemon Shiny Sprite" *ngIf="isShiny">

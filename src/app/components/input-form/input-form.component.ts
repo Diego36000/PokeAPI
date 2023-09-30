@@ -14,7 +14,6 @@ export class InputFormComponent implements OnInit {
   @Output() isShiny = new EventEmitter<Boolean>();
 
   pokemonArr:Pokemon[] = [];
-  //InputID = new FormControl();
   InputName = new FormControl();
   InputShiny = new FormControl();
 
@@ -31,34 +30,19 @@ export class InputFormComponent implements OnInit {
     this.isShiny.emit(this.InputShiny.value);
   }
 
-  /*
-  async getPokemonByID() {
-    const id:number = this.InputID.value;
-    let pokemon:Pokemon|undefined;
-    if(!Number.isNaN(Number.parseInt(id.toString()))) {
-      try {
-        pokemon = await this.pokemonService.getPokemonByID(id);
-        this.pokemonArr.push(pokemon);
-        this.sendPokemon();
-      } catch (error) {
-        console.log("An error ocurred", error);
-      }
-    } else {
-      console.log("Input invalido");
-    }
-  }
-  */
-
   async getPokemonByName() {
     const name:string = this.InputName.value;
     let pokemon:Pokemon|undefined;
-    console.log(name);
 
    if(!this.isEmpty(name)) {
     try {
       pokemon = await this.pokemonService.getPokemonByName(name.toLowerCase());
-      this.pokemonArr.push(pokemon);
-      this.sendPokemon();
+      if(!this.pokemonArr.find(poke => poke.name === name)) {
+        this.pokemonArr.push(pokemon);
+        this.sendPokemon();
+      } else {
+        console.log("Pokemon already searched");
+      }
     } catch (error) {
       console.log("An error ocurred", error);
     }
@@ -67,7 +51,5 @@ export class InputFormComponent implements OnInit {
    }
   }
 
-  isEmpty(str:String):boolean {
-    return (!str);
-  }
+  isEmpty(str:String):boolean{ return (!str) }
 }

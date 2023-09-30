@@ -1,7 +1,8 @@
 <div>
   <mat-form-field appearance="outline" class="px-1">
-    <mat-label>Search Pokemon using Name</mat-label>
-    <input matInput [formControl]="InputName" (blur)="getPokemonByName()" id="name" name="name">
+    <mat-label>Type pokemon name</mat-label>
+    <input matInput [formControl]="InputName" id="name" name="name">
   </mat-form-field>
   <mat-checkbox [formControl]="InputShiny" (change)="isShinySelected()" class="">Shiny Sprites</mat-checkbox>
+  <button class="mat-raised-button" color="warn" (click)="getPokemonByName()"> Search </button>
 </div>

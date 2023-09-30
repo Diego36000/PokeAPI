@@ -15,7 +15,7 @@ import { CapitalizeFirstLetterPipe } from './pipes/capitalize-first-letter.pipe'
 import { InputFormComponent } from './components/input-form/input-form.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RouteErrorComponent } from './components/route-error/route-error.component';
 import { PokemonMainComponent } from './components/pokemon-main/pokemon-main.component';
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
