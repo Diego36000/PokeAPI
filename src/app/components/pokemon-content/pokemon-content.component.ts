@@ -5,11 +5,11 @@ import { ShareDataService } from 'src/app/services/share-data.service';
 
 
 @Component({
-  selector: 'app-main-component',
-  templateUrl: './main-component.component.html',
-  styleUrls: ['./main-component.component.css']
+  selector: 'app-pokemon-content',
+  templateUrl: './pokemon-content.component.html',
+  styleUrls: ['./pokemon-content.component.css']
 })
-export class MainComponentComponent implements OnInit {
+export class PokemonContentComponent implements OnInit {
 
   @Input() pokemonList: Pokemon[] = [];
   @Input() isShiny: Boolean = false;

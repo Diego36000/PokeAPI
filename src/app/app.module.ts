@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { MainComponentComponent } from './components/main-component/main-component.component';
+import { PokemonContentComponent } from './components/pokemon-content/pokemon-content.component';
 import { AppRoutingModule } from './routing/app-routing/app-routing.module';
 
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
@@ -26,11 +26,12 @@ import { ItemInputComponent } from './components/item-input/item-input.component
 import { ItemContentComponent } from './components/item-content/item-content.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { BerryDetailsComponent } from './components/berry-details/berry-details.component';
+import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponentComponent,
+    PokemonContentComponent,
     CapitalizeFirstLetterPipe,
     PokemonInputComponent,
     RouteErrorComponent,
@@ -43,7 +44,8 @@ import { BerryDetailsComponent } from './components/berry-details/berry-details.
     ItemInputComponent,
     ItemContentComponent,
     ItemDetailsComponent,
-    BerryDetailsComponent
+    BerryDetailsComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

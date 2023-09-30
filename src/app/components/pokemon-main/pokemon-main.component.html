@@ -1,4 +1,4 @@
 <div style="padding: 30px;">
   <app-pokemon-input (pokemonList)="collectPokemon($event)" (isShiny)="setShinySprites($event)"></app-pokemon-input>
-  <app-main-component [pokemonList]="pokemonList" [isShiny]="isShiny"></app-main-component>
+  <app-pokemon-content [pokemonList]="pokemonList" [isShiny]="isShiny"></app-pokemon-content>
 </div>

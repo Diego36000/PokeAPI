@@ -7,10 +7,10 @@ import { BerryMainComponent } from "src/app/components/berry-main/berry-main.com
 import { BerryDetailsComponent } from "src/app/components/berry-details/berry-details.component";
 import { ItemMainComponent } from "src/app/components/item-main/item-main.component";
 import { ItemDetailsComponent } from "src/app/components/item-details/item-details.component";
-import { AppComponent } from "src/app/app.component";
+import { MainComponent } from "src/app/components/main/main.component";
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', component: MainComponent},
   {path: 'pokemon', component: PokemonMainComponent},
   {path: 'pokemon/:id', component: PokemonDetailsComponent},
   {path: 'berry', component:BerryMainComponent},
